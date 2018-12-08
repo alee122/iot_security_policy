@@ -1,2 +1,84 @@
-\subsection{test}
-Hello world.
+\subsection{The Internet of Things}
+
+Broadly defined, Internet of Things (IoT) refers to a network of internet-connected devices with chips in them that collect and communicate data (Burgess 2018).
+
+As more devices get installed, IoT systems contain an ever-growing amount of information on their users. These different data sensors deployed in many different settings will generate and aggregate much more granular data on people’s movements, habits, vital signs, and utility usage (Desai and Upadhyay 2014). Some of the data collected through these sensor devices are considered to be sensitive personal data. The dramatic increase in the amount and pace of personal data aggregated by IoT devices requires a targeted effort in understanding the privacy and security consequences of IoT device installments for the consumers.
+
+\subsection{The Smart Home}
+
+A “smart home” can be defined as a residence that has connected devices for various household purposes. We identify the characteristics of smart home environments that are relevant to security and privacy concerns as follows (Lin et al. 2016, Zou n.d.):
+
+\begin{itemize}
+\item {\bf Heterogeneity:} Different devices supplied by different vendors follow different standards, including security
+\item {\bf Installation:} Individuals tend to install their own devices, meaning that the non-expert consumer has to educate themselves on safe and secure installation
+\item {\bf Physical Access:} Devices are indirectly physically accessible via the home’s physical internet connection, since they are generally connected to the internet
+\item {\bf Professional Services:} Support services for installation and setup are not always available
+\item {\bf Security Updates:} Few smart household appliances provide security updates or are designed to use third-party  security solutions
+\item {\bf Standards:} Smart homes implement looser standards for security, in comparison to other industries, such as healthcare
+\item {\bf System Resources:} Generally-speaking, devices are controlled by microcontrollers and have limited processing power and memory, which limits the ability to implement complex security solutions
+\end{itemize}
+
+Due to these characteristics, smart homes present distinctive privacy and security challenges for consumers. It is important for smart home technology providers and policy makers to ensure that the new systems provide sufficient security and availability to be managed by non-technical, non-expert users\footnote{For the purposes of this paper, we define this to be an individual who has no deeper knowledge of how the IoT product works besides whatever is on the box or setup instructions.}.
+
+\subsection{The Smart Home and Data Collection}
+As noted earlier, the amount of data collected by IoT devices has been growing at a significant rate, which includes the data collected by smart home devices. IoT data is used to affect the future actions that IoT devices take. We identify two main categories of IoT data as it relates to our analysis: (“Get To Know The Four Types Of Data In The Internet Of Things,” 2015):
+
+\begin{itemize}
+\item {\bf Status Data:} The most basic, and prevalent, type of IoT data---whether a device is on, who is connected to it, measurements of the environment including temperature, etc.---which feeds other types of data. This data is important because the atomic nature of it means that other insights can be teased from them---such as when the owner of a house is home, and their daily routines such as sleep schedules.
+\item {\bf Automation Setting:} IoT devices are designed to automate menial tasks, and usually build automation plans on top of the basic status data. This can include the expected hours a user is home for a smart thermostat, or which devices comprise of a room in a home. Like status data, this could provide an adversary knowledge about the lives of a user. Furthermore, if an adversary is able to alter this automation, this can pose both present and future risks to users. For example, a security camera’s settings can be altered to never activate, rather than activating when its owner leaves the house. A smart stove can be altered to turn on the burner during the owner’s sleep schedule, posing a fire hazard.
+\end{itemize}
+
+\subsection{Security and Privacy Threats to Smart Homes}
+IoT device security concerns can primarily be categorized into two areas: (i) the functional security relating to the device itself and its operation (“device security”), and (ii) the security relating to data and metadata collected by the device (“data security”). Device security and data security are not mutually-exclusive; for instance, security pertaining to data-at-rest on the device would fall into both categories. The Threat Model section discusses this in more detail.
+
+\subsubsection{Home Automation and Security}
+While assessing a design’s security, the following points should be considered:\\
+
+{\bf Data Security} (control of data stored on the device)\\
+\begin{itemize}
+\item What data is being recorded? How valuable is it to an attacker? What is the cost to the user of an attacker getting it? Are there any other costs?
+\item How might the data be illegitimately accessed while on the device?
+\item If the data leaves the device, can an attacker eavesdrop?
+\item If the data leaves the device, where is it sent? What is the security posture of its destination? Will it be anonymized? If not, where else might it be sent in the future?
+\end{itemize}
+
+{\bf Device Security} (control of what code is executed)
+\begin{itemize}
+\item What credentials are required for the fullest level of control intended for the consumer to have? Are there any credentials that offer even more control than that (i.e. a development debug mode)? How secure are these credentials? Can they be guessed or brute-forced?
+\item How are firmware updates done? What level of access is needed to perform firmware updates? Are updates signed? Are the signatures checked? Could they be forged?
+\item Is there a way to detect malicious code running on the device?
+\item What are the costs to the user of malicious but non-information-stealing code running on the device? (Likely minimal; in fact, it is in the attacker’s interest to keep the user from noticing that anything has gone wrong at all.)
+\item Are there any other costs? (Quite possibly, particularly in the case of malicious IoT botnets such as Mirai, which have knocked large chunks of the Internet offline with DDoS attacks.)
+\end{itemize}
+
+
+The current state of smart home device security is concerning - one in ten users have the same password across all their devices, while 24\% use the same set of passwords across their devices (Braue 2018). This problem is not unique to IoT devices. More than half the credentials in different account breaches reused passwords for the same account names across different services (Hunt, 2013). This implies that a data breach on a service unrelated to smart homes may compromise smart home devices if the same credentials are reused.
+
+Most of the threats covered above overlap with the online threats that users face while using other existing online environments. However, the number of data collection points have been dramatically increasing, and will continue to do so as a result of utilizing IoT devices. We believe the widespread usage of these devices distinguish security and privacy threats pertaining to IoT an important issue to be tackled with special attention of various stakeholders involved in the IoT ecosystem, which we identify below.
+
+\subsubsection{Home Automation and Privacy}
+Referring to the definition of Warren and Brandeis, we define privacy related to home IoT as data collection that reveals facts pertaining to the personal lives of individuals, including their thoughts, sentiments, and emotions (Warren \& Brandeis, 1890). The major security and privacy issues related to the data groups identified earlier can be broadly grouped as follows (Lin et al. 2016; Heartfield et al. 2018; Ziegeldorf, Morchon, and Wehrle 2014):
+
+\begin{itemize}
+\item {\bf Confidentiality and Privacy:} Keeping data of users private
+\item {\bf Authentication:} The ability to recognize and confirm identity of the users
+\item {\bf Access:} Ensuring that only the authorized users have access to data and controls
+\end{itemize}
+
+{\bf Confidentiality:} Threats around confidentiality may include breaches of personal information. A relevant example of this threat is the heatmaps released by Strava. When fitness tracking application Strava in combination with fitness tracker manufacturer Suunto released heatmaps, it wasn’t just the locations of secret military bases that were revealed - the identities of dozens of active duty military personnel were de-anonymized and de-aggregated with fairly straightforward methods that were openly posted online (Cagnazzo, n.d.; Hern, n.d.; Stevel, 2018). Smart homes will have many sensors collecting data from different household appliances. Most of this data will include personal information on the user’s location, habits, and movements. Unless necessary measures are taken, the Strava mistake can be repeated with data collected in people’s private homes.
+
+{\bf Authentication:} Gope and Sikdar identified that IoT devices are often accessible by third parties over wireless connections, “which may cause them to be vulnerable to physical and cloning attacks.” As a result, typical password-only or secret-key-based authentication schemes prove to be insufficient in authenticating that the user is indeed not an adversary (Gope \& Sikdar, 2018). Unauthorized access to IoT devices is crucial as they may provide access to otherwise-confidential information such as personal health information on personal health devices, or provide control access to IoT devices that could harm the users (Arsalan \& Niraj, 2016; Ren, Liu, Ye, \& Zhang, 2017; Schneier, 2018).
+
+{\bf Access:} While an individual data feed from a sensor on one home appliance may seem harmless, collectively it can give away important information about the context and the tenants. For example, collection of the room temperature data may seem innocuous. However, combined with data from security cameras and fridge usage logs, temperature data can be used by thieves to identify the families that are away from home, which would expose the users to additional threats such as break-ins and theft.
+
+\subsection{Stakeholders}
+
+We identify five primary stakeholders involved in the smart home ecosystem:
+
+{\bf Consumers:} The end-users who purchase and use off-the-shelf smart home IoT devices. We do not include sophisticated consumers who modify the hardware, firmware, or software of these IoT devices beyond their original specifications or use. Instead, these individuals rely on the setup instructions provided by suppliers and have no deeper knowledge of how the IoT product works. These consumers are increasingly conscious of security concerns, as well as feature- and cost-conscious.
+{\bf Protocol Designers:} Consortia and trade groups that design IoT protocol specifications, including organizations like Zigbee and corporations like Amazon, Google, and Samsung.
+{\bf IoT Device Manufacturers/Developers:} The companies, product teams, and startups that use the IoT protocol specifications set out by the protocol designers. They can be the same party as protocol designers as in the case of Amazon (Alexa), Google (Google Home), and Samsung (SmartThings). This group can be divided into larger and smaller companies. Larger companies have the financial resources and staff to implement more strict security measures. Smaller firms on the other hand are resource constrained and face significant market pressure, which may lead to negligence in certain security features during the design phase. 
+{\bf Policy-makers:} Lawmakers and government agencies in charge of setting policies and means of enforcement in order to protect the privacy and security needs of their subjects (usually citizens).
+{\bf Adversaries:} Third-parties that aim to, actively or passively, subvert the security of IoT devices and the privacy of consumers. This paper focuses on cybercriminals who do not personally know the victim as we assess this problems caused by this group to be addressable by technical and/or policy solutions (further information included in Appendix).
+
+
