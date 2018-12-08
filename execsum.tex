@@ -1,0 +1,34 @@
+This white paper addresses some of the existing privacy and security threats in the fast expanding use of Internet of things (IoT) devices in “smart homes”. 
+The paper: (i) provides an analysis of the policy and threat landscape for home IoT; (ii) assesses the technical devices and protocols in use (the Zigbee protocol as a key case study); (iii) makes recommendations to improve the existing technical standards. 
+
+The industry is growing quickly in terms of both the number of devices installed and the number of new systems available. 
+These devices collect a significant amount of data that are deemed private or sensitive by their users. 
+As the network of connected devices increases through different media and industries, IoT systems expose their users to privacy and security challenges that can lead to leaks of sensitive personal information, physical threats, and significant cyber attacks.
+
+We chose to focus on home automation as it is likely to be familiar to the reader, is one of the largest subsectors of IoT, and is currently governed by few laws (unlike connected medical devices).
+The users in this segment are mostly individual consumers with limited technical knowledge and limited means of protecting themselves. 
+Companies attempt to design simple, user-friendly devices there are usually installed by the consumers themselves.
+
+Home IoT systems collect a significant amount of sensitive data on users, putting individual consumers at significant risk. 
+The privacy and security threats become more significant when multiple connected devices are compromised since data integration leads to more accurate insights about devices users, which increases their exposure to privacy and security risks.
+
+This paper is aimed at protocol designers and technical consortium members who play an important role in designing and standardizing IoT protocols. 
+These protocol specifications and associated hardware parts and software libraries are leveraged by IoT device manufacturers and developers when building IoT devices and products.
+
+In order to identify strengths and weaknesses in the current home IoT security and privacy protocols, we examined the Zigbee protocol as a case study.
+Zigbee provides one of the most widely used specifications for IoT communication. 
+We also include a brief discussion about the genuine value that networking devices can bring to the consumer.
+
+Using a high-level threat model---an analysis of what assets are in play, what defenses are in place, and who is trying to compromise them and how---we reason that adversaries are who are motivated by some combination of money and notoriety are the most likely attackers. 
+Considering no device can be fully secured against an adversary with unlimited resources and time to execute an attack, this scoping is essential to our recommendations. 
+Realistic adversaries are defined by their likely resources, system access, risk tolerance, and objectives.
+
+We also examined the policy landscape by looking at the rules that govern device security and data security.
+Our focus is on recent and upcoming regulations and policies in the US and EU, the governmental entities at the forefront of IoT regulation.
+This review helped us identify the areas which policy makers have yet to address in order to evaluate whether any of these areas can be tackled with technical solutions.
+
+Before presenting our analysis, we have categorized the key concepts identified in our analysis into a maturity scale.
+We recognize that most of our recommendations are well known within the security community, but the average developer is unlikely to be aware of the techniques we discuss. 
+For this reason we propose integration approaches that would move the burden of security from individual devices to the shared protocol.
+As a result of our assessment of the Zigbee protocol, we identify the key measures that can be addressed through a technical solution as: password requirements, software updates, and dangerous actions like pairing ``failing closed.''\footnote{Rather than accepting errors, put the device in a safe mode.}
+We also include recommendations for design-level security techniques that can be prompted by changes to the protocol.

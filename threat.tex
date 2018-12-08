@@ -1,0 +1,33 @@
+As identified previously, the introduction of commercial IoT devices into the home presents a threat to the user’s information security and privacy. The use of a threat model allows the identification of possible attackers and an assessment of which attacks are the most likely---in this case, the attackers with whom we are concerned from a technical perspective are financially motivated, rather than personally or politically, and likely to only pursue attacks that are high-paying or automatable. This evaluation will allow the identification of not only shortfalls in the technical and policy measures, but also places where attempts at security may have overshot the optimal tradeoff between security and efficiency, usability, etc.
+
+This section will analyze the security context of home automation in general using Salter et. al.’s three-step process:
+\begin{enumerate}
+\item Modeling the “resources, access, risk tolerance, and objectives” of adversaries, noting that “the defender might value an asset completely differently than the attacker” (Salter et. al., 2)
+\item Modeling the vulnerabilities of the system and the corresponding countermeasures, taking into account the life cycle of all components
+\item Synthesizing knowledge about the system and potential attackers to design the most rational countermeasures
+\end{enumerate}
+
+\subsection{Adversaries}
+
+We assume that financially-motivated cybercriminals who do not personally know the victim are the most relevant threat in the context of home automation that can potentially be addressed with technical or regulatory solutions (please see Appendix for further information on different types of adversaries and justification of this conclusion). It is then possible to identify the adversaries’ resources, access, risk tolerance, and objectives as Salter et. al. recommend.
+
+\begin{itemize}
+\item {\bf Resources:} Salter et. al. characterize criminal hackers’ resources as “moderate”. An organized crime ring may have many skilled attackers solving the same problem (but only as many as the expected payoff makes rational). They may have anonymous bulletproof hosting resources, a repository of developed-in-house malware, etc. They will generally not have the level of funding and computational resources of a nation-state actor.
+\item {\bf Access:} It is unlikely that a cybercriminal has any special access to Internet infrastructure, corporate data, etc. They may have any leaked information such as source code that is available on the clear web, on hacker forums, etc.
+\item {\bf Risk Tolerance:} Cybercriminals are strongly incentivized not to get caught if there is the possibility of arrest. However, an important consideration is that commercially-motivated cybercriminals are often operating internationally, and often from countries in which prosecution is unlikely. In several countries from which a large portion of cybercrime originates, such as China and Russia, there is an unofficial detente between hackers and the government, the understanding that hackers may operate more or less with impunity as long as all costs are imposed outside the country’s borders (DeSombre).
+\item {\bf Objectives:} Attackers may monetize access to home automation devices through roughly two assets: personal information (including credentials and financial information) and the ability to execute code on the device. We assume that the attacker’s objective is getting one or both of these assets.
+\end{itemize}
+
+There is the possibility of an attacker who does not know the victim personally nonetheless wanting access to non-monetizable data, such as the feed from IP cameras. For threat modeling purposes, this will be considered to be part of the “attacker after sensitive personal data” case.
+
+This threat model is crafted from the perspective of the manufacturer. It should be noted that the consumer’s threat model may differ slightly. While the manufacturers’ and consumers’ intentions are generally aligned with respect to keep data and resources away from cybercriminals, the consumer must also concern themselves with the possibility of personal data being sent to the manufacturer in a way that may be the manufacturer’s attention, and even disclosed to the consumer, but which the consumer does not wish to transmit.
+
+\subsection{Vulnerabilities}
+The vulnerabilities relevant to home automation are discussed in the Security and Privacy Threats for Smart Homes section above. Some examples of Zigbee-specific vulnerabilities and exploits are described in the Appendix.
+
+\subsection{Synthesis}
+As Herley observes, it cannot be the case that every one of the several billion Internet users worldwide is constantly being attacked by a skilled adversary targeting them personally; there are simply not enough such skilled adversaries to go around (Herley, 2014). Since the focus has narrowed to financially-motivated cyber criminals as their attention can be expected to go wherever there is the most potential for a payoff, with some adjustment for risk (e.g. hackers preferring to operate outside their own country). The odds of exploitation can therefore be greatly lowered with even a modest investment in security, if that investment is targeted such that exploitation of a device, while it may still be technically possible, is simply not worth an attacker’s time. Herley captures this succinctly: “the defense effort should be appropriate to the assets” (Herley, 66).
+
+The attacks related to data privacy may offer a significant payout per device exploited, due to the possibility of subsequent fraud or extortion. Attacks on device security for the purpose of stealing resources rely more on scale---an attacker must be able to exploit many devices relatively easily for the attack to be worth the time. An exploit requiring the attacker’s personal attention on each device is therefore unlikely to be pursued; instead, the attacker will focus on exploits that can be automated and deployed against many devices at once.
+
+A rational security posture for a home automation device, then, is one which (i) closely guards information that can be directly and easily exploited for a significant payout, and (ii.) resists automated attempts to inject code.

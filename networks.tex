@@ -1,0 +1,40 @@
+While digitally controlled home appliances have existed for decades, allowing those devices to communicate with each other and the company that built them is a new phenomenon. 
+There are many benefits to such communication, including more frequent software updates and energy savings, but a downside is that the introduction of thousands of devices of the same kind, often with the same vulnerabilities, makes consumer products a tempting target for attackers. 
+Furthermore, IoT devices have limitations on processing and battery life that aren’t present for the typical desktop computer or even the typical smartphone. 
+
+It is important to differentiate between{\bf standards} and{\bf protocols}. A communications standard is a set of guidlines that a group has agreed to follow, while a communications protocol defines exactly how data is exchanged and the expected behavior. Agreeing on a standard is like agreeing on a language to speak in are agreeing to a protocol is like agreeing to a script to read.
+
+One of the most common standards for developers who are not interested in creating bespoke solutions is Zigbee. 
+
+\subsection{Case Study: Zigbee PRO}
+Zigbee is an IEEE 802.15.4-based specification for self-organizing, wireless ad-hoc networks. 
+Zigbee has three main offerings: Zigbee IP, Zigbee RF4CE, Zigbee PRO. 
+This paper focuses on Zigbee PRO because the owners choose to open source most of the information and is widely used in home automation applications.\footnote{See appendix.} 
+Zigbee PRO provides the most options to users and is considered the most current of the three main Zigbee offerings.
+
+The Zigbee specification is made up of abstractions layers: an application running on a device only needs to see the content delivered, not exactly the frequency the radio is running on.
+More specifically, there are three layers in the specification: application, network, and security.
+Each layer is designed to be as generalizable as possible so that the code can be reused as much as possible so that developers don't have to solve the same problems (with incomplete messages, say) every time a new project is started.
+Zigbee standards designers are thus incentivized to choose to create tools that are useful to everyone in order to provide functionality while keeping the standard easy to understand. 
+This instinct is often a very good thing when it comes to non-security problems like message passing, as it gives a developer a lot of power to make new devices and the security of knowing that future devices are likely to be able to network using the same standard.
+An inexperienced developer therefore has a lot of power to design different products, but not a lot of guidance on designing those products in a secure way. 
+
+When it comes to building secure devices the security layer delivers all the basic tools an expert would need to build a device designed for security and privacy.
+The choice to provide such fundamental mechanisms---specifcially, cryptography ``primitives'' like encryption and authentication---is in keeping with the goal of a design that is as general as possible.
+However, those operations (assuming they're even used in the first place) can be miused to the point of uselessness.
+An insecure password or, worse, a password that is announced to the whole world will not provide confidentiality if used for encryption.
+Secure algorithms are difficult to design and implement correctly, so the developer should be provided with protocols that handle common operations like two devices communicating confidentially.
+
+\subsubsection{The Zigbee Control Network}
+
+A Zigbee network consists of devices, or nodes. Every node is defined by the presence of a microcontroller, transceiver, and antenna. Nodes operate as either full-function devices (FFD) or reduced-function devices (RFD) - the former is capable of performing all tasks as defined by the Zigbee protocol, while the latter only performs a limited, defined number of tasks that is often a subset of the Zigbee protocol. Nodes can be categorized as follows (Elahi \& Gschwender, 2009):
+
+\begin{itemize}
+\item {\bf Coordinator:} An FFD that is responsible for overall network management of the Zigbee network, including starting the networking, assigning addresses, controls joining/leaving of other nodes, and transfers application-layer packets. Every Zigbee network has exactly one coordinator.
+\item {\bf End Device:} Often an RFD, which enables it to consume less power, and frequently only consumes power while transmitting information.
+\item {\bf Router:} An FFD, used in both tree and mesh topologies to expand Zigbee network coverage, as well as find the fastest route from device to device to transmit information.
+\item {\bf Zigbee Trust Center:} A device that provides security management, security key distribution, and device authentication. This is frequently the coordinator device, and exists as exactly one device in each network (Rudresh, 2017). 
+\item {\bf Zigbee Gateway:} The gateway, often the same device as the coordinator or a router, is used to connect the Zigbee network to another network, such as LAN, by performing protocol conversion.
+\end{itemize} 
+
+This architecture is important as it operates mostly invisible to the users, meaning that users typically do not need to establish the role that each device plays. It’s an important first step as it allows certain devices to be built deliberately more secure in order to operate as a Zigbee Trust Center, and centralize critical operations such as authentication.
