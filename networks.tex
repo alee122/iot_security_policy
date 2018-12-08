@@ -29,12 +29,12 @@ Secure algorithms are difficult to design and implement correctly, so the develo
 
 A Zigbee network consists of devices, or nodes. Every node is defined by the presence of a microcontroller, transceiver, and antenna. Nodes operate as either full-function devices (FFD) or reduced-function devices (RFD) - the former is capable of performing all tasks as defined by the Zigbee protocol, while the latter only performs a limited, defined number of tasks that is often a subset of the Zigbee protocol. Nodes can be categorized as follows (Elahi \& Gschwender, 2009):
 
-\begin{itemize}
-\item {\bf Coordinator:} An FFD that is responsible for overall network management of the Zigbee network, including starting the networking, assigning addresses, controls joining/leaving of other nodes, and transfers application-layer packets. Every Zigbee network has exactly one coordinator.
-\item {\bf End Device:} Often an RFD, which enables it to consume less power, and frequently only consumes power while transmitting information.
-\item {\bf Router:} An FFD, used in both tree and mesh topologies to expand Zigbee network coverage, as well as find the fastest route from device to device to transmit information.
-\item {\bf Zigbee Trust Center:} A device that provides security management, security key distribution, and device authentication. This is frequently the coordinator device, and exists as exactly one device in each network (Rudresh, 2017). 
-\item {\bf Zigbee Gateway:} The gateway, often the same device as the coordinator or a router, is used to connect the Zigbee network to another network, such as LAN, by performing protocol conversion.
-\end{itemize} 
+\begin{description}
+\item[Coordinator] An FFD that is responsible for overall network management of the Zigbee network, including starting the networking, assigning addresses, controls joining/leaving of other nodes, and transfers application-layer packets. Every Zigbee network has exactly one coordinator.
+\item[End Device] Often an RFD, which enables it to consume less power, and frequently only consumes power while transmitting information.
+\item[Router] An FFD, used in both tree and mesh topologies to expand Zigbee network coverage, as well as find the fastest route from device to device to transmit information.
+\item[Zigbee Trust Center] A device that provides security management, security key distribution, and device authentication. This is frequently the coordinator device, and exists as exactly one device in each network (Rudresh, 2017). 
+\item[Zigbee Gateway] The gateway, often the same device as the coordinator or a router, is used to connect the Zigbee network to another network, such as LAN, by performing protocol conversion.
+\end{description} 
 
 This architecture is important as it operates mostly invisible to the users, meaning that users typically do not need to establish the role that each device plays. It’s an important first step as it allows certain devices to be built deliberately more secure in order to operate as a Zigbee Trust Center, and centralize critical operations such as authentication.
