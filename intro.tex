@@ -8,25 +8,25 @@ As more devices get installed, IoT systems contain an ever-growing amount of inf
 
 A “smart home” can be defined as a residence that has connected devices for various household purposes. We identify the characteristics of smart home environments that are relevant to security and privacy concerns as follows (Lin et al. 2016, Zou n.d.):
 
-\begin{itemize}
-\item {\bf Heterogeneity:} Different devices supplied by different vendors follow different standards, including security
-\item {\bf Installation:} Individuals tend to install their own devices, meaning that the non-expert consumer has to educate themselves on safe and secure installation
-\item {\bf Physical Access:} Devices are indirectly physically accessible via the home’s physical internet connection, since they are generally connected to the internet
-\item {\bf Professional Services:} Support services for installation and setup are not always available
-\item {\bf Security Updates:} Few smart household appliances provide security updates or are designed to use third-party  security solutions
-\item {\bf Standards:} Smart homes implement looser standards for security, in comparison to other industries, such as healthcare
-\item {\bf System Resources:} Generally-speaking, devices are controlled by microcontrollers and have limited processing power and memory, which limits the ability to implement complex security solutions
-\end{itemize}
+\begin{description}
+\item [Heterogeneity:] Different devices supplied by different vendors follow different standards, including security
+\item [Installation:] Individuals tend to install their own devices, meaning that the non-expert consumer has to educate themselves on safe and secure installation
+\item [Physical Access:] Devices are indirectly physically accessible via the home’s physical internet connection, since they are generally connected to the internet
+\item [Professional Services:] Support services for installation and setup are not always available
+\item [Security Updates:] Few smart household appliances provide security updates or are designed to use third-party  security solutions
+\item [Standards:] Smart homes implement looser standards for security, in comparison to other industries, such as healthcare
+\item [System Resources:] Generally-speaking, devices are controlled by microcontrollers and have limited processing power and memory, which limits the ability to implement complex security solutions
+\end{description}
 
 Due to these characteristics, smart homes present distinctive privacy and security challenges for consumers. It is important for smart home technology providers and policy makers to ensure that the new systems provide sufficient security and availability to be managed by non-technical, non-expert users\footnote{For the purposes of this paper, we define this to be an individual who has no deeper knowledge of how the IoT product works besides whatever is on the box or setup instructions.}.
 
 \subsection{The Smart Home and Data Collection}
 As noted earlier, the amount of data collected by IoT devices has been growing at a significant rate, which includes the data collected by smart home devices. IoT data is used to affect the future actions that IoT devices take. We identify two main categories of IoT data as it relates to our analysis: (“Get To Know The Four Types Of Data In The Internet Of Things,” 2015):
 
-\begin{itemize}
-\item {\bf Status Data:} The most basic, and prevalent, type of IoT data---whether a device is on, who is connected to it, measurements of the environment including temperature, etc.---which feeds other types of data. This data is important because the atomic nature of it means that other insights can be teased from them---such as when the owner of a house is home, and their daily routines such as sleep schedules.
-\item {\bf Automation Setting:} IoT devices are designed to automate menial tasks, and usually build automation plans on top of the basic status data. This can include the expected hours a user is home for a smart thermostat, or which devices comprise of a room in a home. Like status data, this could provide an adversary knowledge about the lives of a user. Furthermore, if an adversary is able to alter this automation, this can pose both present and future risks to users. For example, a security camera’s settings can be altered to never activate, rather than activating when its owner leaves the house. A smart stove can be altered to turn on the burner during the owner’s sleep schedule, posing a fire hazard.
-\end{itemize}
+\begin{description}
+\item [Status Data:] The most basic, and prevalent, type of IoT data---whether a device is on, who is connected to it, measurements of the environment including temperature, etc.---which feeds other types of data. This data is important because the atomic nature of it means that other insights can be teased from them---such as when the owner of a house is home, and their daily routines such as sleep schedules.
+\item [Automation Setting:] IoT devices are designed to automate menial tasks, and usually build automation plans on top of the basic status data. This can include the expected hours a user is home for a smart thermostat, or which devices comprise of a room in a home. Like status data, this could provide an adversary knowledge about the lives of a user. Furthermore, if an adversary is able to alter this automation, this can pose both present and future risks to users. For example, a security camera’s settings can be altered to never activate, rather than activating when its owner leaves the house. A smart stove can be altered to turn on the burner during the owner’s sleep schedule, posing a fire hazard.
+\end{description}
 
 \subsection{Security and Privacy Threats to Smart Homes}
 IoT device security concerns can primarily be categorized into two areas: (i) the functional security relating to the device itself and its operation (“device security”), and (ii) the security relating to data and metadata collected by the device (“data security”). Device security and data security are not mutually-exclusive; for instance, security pertaining to data-at-rest on the device would fall into both categories. The Threat Model section discusses this in more detail.
@@ -59,11 +59,11 @@ Most of the threats covered above overlap with the online threats that users fac
 \subsubsection{Home Automation and Privacy}
 Referring to the definition of Warren and Brandeis, we define privacy related to home IoT as data collection that reveals facts pertaining to the personal lives of individuals, including their thoughts, sentiments, and emotions (Warren \& Brandeis, 1890). The major security and privacy issues related to the data groups identified earlier can be broadly grouped as follows (Lin et al. 2016; Heartfield et al. 2018; Ziegeldorf, Morchon, and Wehrle 2014):
 
-\begin{itemize}
-\item {\bf Confidentiality and Privacy:} Keeping data of users private
-\item {\bf Authentication:} The ability to recognize and confirm identity of the users
-\item {\bf Access:} Ensuring that only the authorized users have access to data and controls
-\end{itemize}
+\begin{description}
+\item [Confidentiality and Privacy:] Keeping data of users private
+\item [Authentication:] The ability to recognize and confirm identity of the users
+\item [Access:] Ensuring that only the authorized users have access to data and controls
+\end{description}
 
 {\bf Confidentiality:} Threats around confidentiality may include breaches of personal information. A relevant example of this threat is the heatmaps released by Strava. When fitness tracking application Strava in combination with fitness tracker manufacturer Suunto released heatmaps, it wasn’t just the locations of secret military bases that were revealed - the identities of dozens of active duty military personnel were de-anonymized and de-aggregated with fairly straightforward methods that were openly posted online (Cagnazzo, n.d.; Hern, n.d.; Stevel, 2018). Smart homes will have many sensors collecting data from different household appliances. Most of this data will include personal information on the user’s location, habits, and movements. Unless necessary measures are taken, the Strava mistake can be repeated with data collected in people’s private homes.
 
