@@ -1,0 +1,45 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{The Internet of Things}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{The Smart Home}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{The Smart Home and Data Collection}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Security and Privacy Threats to Smart Homes}{section.1}% 5
+\BOOKMARK [3][-]{subsubsection.1.4.1}{Home Automation and Security}{subsection.1.4}% 6
+\BOOKMARK [3][-]{subsubsection.1.4.2}{Home Automation and Privacy}{subsection.1.4}% 7
+\BOOKMARK [2][-]{subsection.1.5}{Stakeholders}{section.1}% 8
+\BOOKMARK [1][-]{section.2}{Communication Protocols and Standards}{}% 9
+\BOOKMARK [2][-]{subsection.2.1}{Case Study: Zigbee PRO}{section.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.1.1}{The Zigbee Control Network}{subsection.2.1}% 11
+\BOOKMARK [1][-]{section.3}{Threat Model}{}% 12
+\BOOKMARK [2][-]{subsection.3.1}{Adversaries}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.2}{Vulnerabilities}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.3}{Synthesis}{section.3}% 15
+\BOOKMARK [1][-]{section.4}{Policy Landscape}{}% 16
+\BOOKMARK [2][-]{subsection.4.1}{Review of Existing Policies}{section.4}% 17
+\BOOKMARK [1][-]{section.5}{Analysis and Recommendations}{}% 18
+\BOOKMARK [2][-]{subsection.5.1}{Concepts with Some Reflection in Policy}{section.5}% 19
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Preventing Weak and Default Passwords}{subsection.5.1}% 20
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Software Updates and Vulnerability Notification}{subsection.5.1}% 21
+\BOOKMARK [2][-]{subsection.5.2}{Concepts for Encouraging Security-by-Design}{section.5}% 22
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Failing Closed}{subsection.5.2}% 23
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Failing Slowly}{subsection.5.2}% 24
+\BOOKMARK [2][-]{subsection.5.3}{Concepts that Give Developers Secure Tools}{section.5}% 25
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Forward Security}{subsection.5.3}% 26
+\BOOKMARK [3][-]{subsubsection.5.3.2}{Rule of Least Power}{subsection.5.3}% 27
+\BOOKMARK [2][-]{subsection.5.4}{Concepts that Policy Makers are Encouraging}{section.5}% 28
+\BOOKMARK [3][-]{subsubsection.5.4.1}{Explicit Consent}{subsection.5.4}% 29
+\BOOKMARK [3][-]{subsubsection.5.4.2}{Data Minimization}{subsection.5.4}% 30
+\BOOKMARK [3][-]{subsubsection.5.4.3}{International Collaboration}{subsection.5.4}% 31
+\BOOKMARK [1][-]{section.6}{Conclusion}{}% 32
+\BOOKMARK [1][-]{section.7}{Appendix}{}% 33
+\BOOKMARK [2][-]{subsection.7.1}{The Smart Home}{section.7}% 34
+\BOOKMARK [2][-]{subsection.7.2}{What is Zigbee?}{section.7}% 35
+\BOOKMARK [2][-]{subsection.7.3}{The Zigbee PRO Protocol}{section.7}% 36
+\BOOKMARK [2][-]{subsection.7.4}{Threat Model: Adversaries}{section.7}% 37
+\BOOKMARK [2][-]{subsection.7.5}{Zigbee-Specific Vulnerability Analysis}{section.7}% 38
+\BOOKMARK [2][-]{subsection.7.6}{Data Security}{section.7}% 39
+\BOOKMARK [2][-]{subsection.7.7}{Device Security}{section.7}% 40
+\BOOKMARK [2][-]{subsection.7.8}{Policy Landscape}{section.7}% 41
+\BOOKMARK [2][-]{subsection.7.9}{Established Regulatory Concepts}{section.7}% 42
+\BOOKMARK [3][-]{subsubsection.7.9.1}{Right to be Forgotten}{subsection.7.9}% 43
+\BOOKMARK [3][-]{subsubsection.7.9.2}{Vulnerability Notification}{subsection.7.9}% 44
+\BOOKMARK [3][-]{subsubsection.7.9.3}{Data Portability}{subsection.7.9}% 45
